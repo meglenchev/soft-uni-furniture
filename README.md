@@ -18,5 +18,9 @@ SoftUni JS Back End Course Projects
 ## Authentication / Authorization
 - [x] Add User Controller
 - [x] Add Json Parser `app.use(express.json())`
-- [] Create User Registration
-- [] 
+- [x] Add Registration Endpoint
+- [x] Add / Setup DB `npm install mongoose`
+- [] Add User Model
+- [] Add User Service With Register Method
+- [] Install Bcrypt
+- [] Hash Password On Register 

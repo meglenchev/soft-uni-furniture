@@ -8,3 +8,7 @@ SoftUni JS Back End Course Projects
 ## Startup Client
 - [x] Intsall Vite ( Local Dev Server) `npm i -D vite`
 - [x] Setup Vite
+
+## Setup REST API
+- [x] Initialize Project
+- [] Install And Setup Expres

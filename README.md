@@ -11,4 +11,4 @@ SoftUni JS Back End Course Projects
 
 ## Setup REST API
 - [x] Initialize Project
-- [] Install And Setup Expres
+- [x] Install And Setup Expres `npm i express`

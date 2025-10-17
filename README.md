@@ -17,6 +17,6 @@ SoftUni JS Back End Course Projects
 
 ## Authentication / Authorization
 - [x] Add User Controller
+- [x] Add Json Parser `app.use(express.json())`
 - [] Create User Registration
-- [] 
 - [] 

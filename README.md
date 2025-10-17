@@ -20,7 +20,7 @@ SoftUni JS Back End Course Projects
 - [x] Add Json Parser `app.use(express.json())`
 - [x] Add Registration Endpoint
 - [x] Add / Setup DB `npm install mongoose`
-- [] Add User Model
+- [x] Add User Model
 - [] Add User Service With Register Method
 - [] Install Bcrypt
 - [] Hash Password On Register 

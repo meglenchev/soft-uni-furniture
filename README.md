@@ -4,3 +4,7 @@ SoftUni JS Back End Course Projects
 - [x] Create Repo
 - [x] Initial Folder Structure
 - [x] Add Client Resources And Install Dependencies `cd client` `npm i`
+
+## Startup Client
+- [x] Intsall Vite ( Local Dev Server) `npm i -D vite`
+- [x] Setup Vite

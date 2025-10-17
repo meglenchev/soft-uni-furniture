@@ -14,3 +14,9 @@ SoftUni JS Back End Course Projects
 - [x] Install And Setup Expres `npm i express`
 - [x] Add Cors To API `npm i cors`
 - [x] Add Furniture Controller
+
+## Authentication / Authorization
+- [x] Add User Controller
+- [] Create User Registration
+- [] 
+- [] 

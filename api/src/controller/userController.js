@@ -5,9 +5,13 @@ export const userController = Router();
 
 userController.post('/register', async (req, res) => {
     const { email, password } = req.body;
-    const user = await userService.register(email, password);
 
-    res.status(201).end();
+    try {
+        const result = await userService.register(email, password);
+        res.status(201).json(result);
+    } catch (err) {
+        res.status(401).json({message: err.message});
+    }
 });
 
 userController.post('/login', async (req, res) => {
@@ -21,6 +25,7 @@ userController.post('/login', async (req, res) => {
     }
 });
 
-userController.get('/login', (req, res) => {
-    res.end();
+userController.get('/logout', (req, res) => {   
+    // TODO: Invalidate token
+    res.status(204).json({ok: true});
 });

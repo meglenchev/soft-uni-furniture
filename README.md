@@ -27,6 +27,8 @@ SoftUni JS Back End Course Projects
 - [x] Add Login Endpoint And Service `npm install bcrypt`
 - [x] Verify Login Credentials
 - [x] Generate And Return Token `npm install jsonwebtoken`
+- [x] Auto Login After Register
+- [x] Create Logout
 
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

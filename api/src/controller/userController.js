@@ -10,8 +10,9 @@ userController.post('/register', async (req, res) => {
     res.status(201).end();
 });
 
-userController.post('/login', (req, res) => {
-    res.end();
+userController.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    console.log(email, password);
 });
 
 userController.get('/login', (req, res) => {

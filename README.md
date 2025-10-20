@@ -23,4 +23,7 @@ SoftUni JS Back End Course Projects
 - [x] Add User Model
 - [x] Add User Service With Register Method
 - [x] Install Bcrypt
-- [x] Hash Password On Register 
+- [x] Hash Password On Register Model
+- [x] Add Login Endpoint And Service
+- [x] Verify Login Credentials
+- [] Generate And Return Token

@@ -35,8 +35,8 @@ SoftUni JS Back End Course Projects
 - [x] Add Funriture Model
 - [x] Add Funriture Service
 - [x] Create Furniture Endpoints
-- [] 
-- [] 
+- [x] Get All Furniture
+- [x] Select Obly Needed Information For Catalog
 
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

@@ -31,5 +31,12 @@ SoftUni JS Back End Course Projects
 - [x] Create Logout
 - [x] Add Auth Middleware
 
+## Furniture Endpoints
+- [x] Add Funriture Model
+- [] Add Funriture Service
+- [] Create Furniture Endpoints
+- [] 
+- [] 
+
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

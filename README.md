@@ -24,6 +24,9 @@ SoftUni JS Back End Course Projects
 - [x] Add User Service With Register Method
 - [x] Install Bcrypt
 - [x] Hash Password On Register Model
-- [x] Add Login Endpoint And Service
+- [x] Add Login Endpoint And Service `npm install bcrypt`
 - [x] Verify Login Credentials
-- [] Generate And Return Token
+- [x] Generate And Return Token `npm install jsonwebtoken`
+
+## Bonus
+- [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

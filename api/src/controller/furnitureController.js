@@ -1,6 +1,7 @@
 import querystring from "querystring";
 import { Router } from "express";
 import furnitureService from "../services/furnitureService.js";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 export const furnitureController = Router()
 
@@ -13,7 +14,7 @@ furnitureController.get('/', async (req, res) => {
         filter = querystring.parse(query);
         console.log(filter._ownerId);
     }
-    
+
     const furnitures = await furnitureService.getAll(filter);
     res.json(furnitures || []);
 });
@@ -22,8 +23,12 @@ furnitureController.post('/', async (req, res) => {
     const furnitureData = req.body;
     const ownerId = req.user.id;
 
-    const furniture = await furnitureService.create(furnitureData, ownerId);
-    res.status(201).json(furniture);
+    try {
+        const furniture = await furnitureService.create(furnitureData, ownerId);
+        res.status(201).json(furniture);
+    } catch (err) {
+        res.status(400).json({message: getErrorMessage(err)});
+    }
 })
 
 furnitureController.get('/:furnitureId', async (req, res) => {
@@ -43,7 +48,7 @@ furnitureController.put('/:furnitureId', async (req, res) => {
 
         res.status(200).json(updatedFurniture);
     } catch (err) {
-        res.status(304).json({ message: err.message });
+        res.status(304).json({ message: getErrorMessage(err) });
     }
 })
 
@@ -56,6 +61,6 @@ furnitureController.delete('/:furnitureId', async (req, res) => {
 
         res.json(furniture);
     } catch (err) {
-        res.status(304).json({ message: err.message });
+        res.status(304).json({ message: getErrorMessage(err) });
     }
 })

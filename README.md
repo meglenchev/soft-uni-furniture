@@ -44,5 +44,8 @@ SoftUni JS Back End Course Projects
 - [x] Delate Furniture
 - [x] Filter Furniture By Owner
 
+## Error Handling
+- [x] Create Error Util For Message
+
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

@@ -33,8 +33,8 @@ SoftUni JS Back End Course Projects
 
 ## Furniture Endpoints
 - [x] Add Funriture Model
-- [] Add Funriture Service
-- [] Create Furniture Endpoints
+- [x] Add Funriture Service
+- [x] Create Furniture Endpoints
 - [] 
 - [] 
 

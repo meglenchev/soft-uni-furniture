@@ -7,8 +7,8 @@ export default {
             _ownerId: ownerId,
         });
     },
-    getAll() {
-        return Furniture.find().select({
+    getAll(filter) {
+        return Furniture.find(filter).select({
             description: true,
             img: true,
             price: true
@@ -20,7 +20,8 @@ export default {
     update(furnitureId, furnitureData) {
         return Furniture.findByIdAndUpdate(furnitureId, furnitureData);
     }, 
-    delete(furnitureId) {
-        return Furniture.findByIdAndDelete(furnitureId);
+    delete(furnitureId, userId) {
+        //return Furniture.findByIdAndDelete(furnitureId);
+        return Furniture.deleteOne({ _id: furnitureId, _ownerId: userId })
     }
 }

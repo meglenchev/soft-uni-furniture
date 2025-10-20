@@ -1,10 +1,20 @@
+import querystring from "querystring";
 import { Router } from "express";
 import furnitureService from "../services/furnitureService.js";
 
 export const furnitureController = Router()
 
 furnitureController.get('/', async (req, res) => {
-    const furnitures = await furnitureService.getAll();
+    //const filter = new URLSearchParams(req.query?.where.replaceAll('"', ''));
+    const query = req.query.where?.replaceAll('"', '');
+
+    let filter = {};
+    if (query) {
+        filter = querystring.parse(query);
+        console.log(filter._ownerId);
+    }
+    
+    const furnitures = await furnitureService.getAll(filter);
     res.json(furnitures || []);
 });
 
@@ -39,13 +49,13 @@ furnitureController.put('/:furnitureId', async (req, res) => {
 
 furnitureController.delete('/:furnitureId', async (req, res) => {
     const furnitureId = req.params.furnitureId;
+    const userId = req.user.id;
 
     try {
-        const furniture = await furnitureService.delete(furnitureId);
+        const furniture = await furnitureService.delete(furnitureId, userId);
 
         res.json(furniture);
     } catch (err) {
         res.status(304).json({ message: err.message });
     }
-    res.end()
 })

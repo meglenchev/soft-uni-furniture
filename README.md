@@ -22,5 +22,5 @@ SoftUni JS Back End Course Projects
 - [x] Add / Setup DB `npm install mongoose`
 - [x] Add User Model
 - [x] Add User Service With Register Method
-- [] Install Bcrypt
-- [] Hash Password On Register 
+- [x] Install Bcrypt
+- [x] Hash Password On Register 

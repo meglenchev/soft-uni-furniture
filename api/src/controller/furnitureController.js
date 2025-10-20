@@ -29,10 +29,23 @@ furnitureController.put('/:furnitureId', async (req, res) => {
     const furnitureData = req.body;
 
     try {
-        const updatedFurniture = await furnitureService.update(furnitureId, furnitureData, {runValidators: true});
+        const updatedFurniture = await furnitureService.update(furnitureId, furnitureData, { runValidators: true });
 
         res.status(200).json(updatedFurniture);
     } catch (err) {
-        res.status(304).json({message: err.message});
+        res.status(304).json({ message: err.message });
     }
+})
+
+furnitureController.delete('/:furnitureId', async (req, res) => {
+    const furnitureId = req.params.furnitureId;
+
+    try {
+        const furniture = await furnitureService.delete(furnitureId);
+
+        res.json(furniture);
+    } catch (err) {
+        res.status(304).json({ message: err.message });
+    }
+    res.end()
 })

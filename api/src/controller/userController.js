@@ -20,7 +20,7 @@ userController.post('/login', async (req, res) => {
     
     try {
         const result = await userService.login(email, password);
-        res.status(201).json(result)
+        res.status(200).json(result)
     } catch (err) {
         res.status(400).json({message: getErrorMessage(err)});
     }

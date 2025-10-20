@@ -46,6 +46,7 @@ SoftUni JS Back End Course Projects
 
 ## Error Handling
 - [x] Create Error Util For Message
+- [x] Global Error Handling
 
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

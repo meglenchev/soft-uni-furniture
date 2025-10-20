@@ -12,7 +12,6 @@ furnitureController.get('/', async (req, res) => {
     let filter = {};
     if (query) {
         filter = querystring.parse(query);
-        console.log(filter._ownerId);
     }
 
     const furnitures = await furnitureService.getAll(filter);

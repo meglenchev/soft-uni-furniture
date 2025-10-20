@@ -6,6 +6,7 @@ import 'dotenv/config';
 
 import { routes } from './routs.js';
 import { authMiddleware } from './middlewares/authMiddleware.js';
+import { errorHandler } from './middlewares/errorHandler.js';
 
 
 const app = express();
@@ -35,5 +36,8 @@ app.use(authMiddleware);
 
 // Add Routs
 app.use(routes)
+
+// Add Global Error Handling
+app.use(errorHandler);
 
 app.listen(3030, () => console.log('Server is listening on http://localhost:3030...'));

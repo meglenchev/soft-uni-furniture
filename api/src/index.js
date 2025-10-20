@@ -5,12 +5,14 @@ import cors from 'cors';
 import 'dotenv/config';
 
 import { routes } from './routs.js';
+import { authMiddleware } from './middlewares/authMiddleware.js';
 
 
 const app = express();
 
 // Setup Mongoose
 const url = 'mongodb://localhost:27017';
+
 try {
     await mongoose.connect(url, {
         dbName: 'furniture',
@@ -27,6 +29,9 @@ app.use(cors());
 
 // Add Json Parser
 app.use(express.json());
+
+// Add Auth Middleware
+app.use(authMiddleware);
 
 // Add Routs
 app.use(routes)

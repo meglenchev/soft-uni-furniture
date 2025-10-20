@@ -29,6 +29,7 @@ SoftUni JS Back End Course Projects
 - [x] Generate And Return Token `npm install jsonwebtoken`
 - [x] Auto Login After Register
 - [x] Create Logout
+- [x] Add Auth Middleware
 
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

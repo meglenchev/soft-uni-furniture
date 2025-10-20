@@ -14,3 +14,11 @@ furnitureController.post('/', async (req, res) => {
     const furniture = await furnitureService.create(furnitureData);
     res.status(201).json(furniture);
 })
+
+furnitureController.get('/:furnitureId', async (req, res) => {
+    const furnitureId = req.params.furnitureId;
+    
+    const furniture = await furnitureService.getOne(furnitureId);
+
+    res.status(200).json(furniture);
+})

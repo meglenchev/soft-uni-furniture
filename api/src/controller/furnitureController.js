@@ -23,3 +23,16 @@ furnitureController.get('/:furnitureId', async (req, res) => {
 
     res.status(200).json(furniture);
 })
+
+furnitureController.put('/:furnitureId', async (req, res) => {
+    const furnitureId = req.params.furnitureId;
+    const furnitureData = req.body;
+
+    try {
+        const updatedFurniture = await furnitureService.update(furnitureId, furnitureData, {runValidators: true});
+
+        res.status(200).json(updatedFurniture);
+    } catch (err) {
+        res.status(304).json({message: err.message});
+    }
+})

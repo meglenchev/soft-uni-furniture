@@ -40,6 +40,7 @@ SoftUni JS Back End Course Projects
 - [x] Details Endpoint
 - [x] Get Details Service
 - [x] Add Owner Relation To Furniture
+- [x] Edit Furniture Endpoint
 
 ## Bonus
 - [x] Install And Import Env Variables In App Index `npm install dotenv` Use - `process.env.ENV_NAME`

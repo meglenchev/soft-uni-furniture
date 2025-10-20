@@ -16,5 +16,8 @@ export default {
     },
     getOne(furnitureId) {
         return Furniture.findById(furnitureId);
+    }, 
+    update(furnitureId, furnitureData) {
+        return Furniture.findByIdAndUpdate(furnitureId, furnitureData);
     }
 }
